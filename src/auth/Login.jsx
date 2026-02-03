@@ -33,6 +33,8 @@ const Login = () => {
             <input type="email" name='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
             <input type="password" name='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
             <button type="submit">Login</button>
+            <p>Don't have an account?</p>
+            <button type="button" onClick={() => navigate('/register')}>Register</button>
         </form>
     )
 }

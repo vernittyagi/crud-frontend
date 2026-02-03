@@ -7,6 +7,10 @@ Frontend for Auth API (Github repo - https://github.com/vernittyagi/crud-backend
 - "Protected Routes"
 - "Token expiry handling"
 - "Frontend routes protection"
+- "User registration"
+- "Conditional NavBar based on auth states"
+- "Logout functionality"
+- "Route route and redirect"
 
 
 ## Status
