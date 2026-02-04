@@ -13,9 +13,14 @@ export const fetchClient = async (endpoint, options = {}) => {
     const data = await response.json();
     console.log('data from api - ', data);
     
-    if(!response.ok){
-        throw new Error(data.message || 'Request failed')
+    
+    if (response.status === 401) {
+        localStorage.removeItem("token");
+        window.location.href = '/login';
+        throw new Error("Session expired")
     }
+
+
 
     return data
 }

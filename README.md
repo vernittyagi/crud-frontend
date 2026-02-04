@@ -11,8 +11,18 @@ Frontend for Auth API (Github repo - https://github.com/vernittyagi/crud-backend
 - "Conditional NavBar based on auth states"
 - "Logout functionality"
 - "Route route and redirect"
+- "User profile page showing user email fetched from DB"
+- "Session expiry handling"
+
+## Tech stack
+- Frontend - react (Vite)
+- Backend - Nodejs, Express
+- Database - MongoDB
+- Authetication - JWT, bcrypt
 
 
 ## Status
-Learning Project - Will be adding a register page and more redirect routes with proper Auth check
+Learning Project 
+- Will be adding centralized AuthContext for storing user, isAuthenticated, login and logout  
+- Inactivity logout functionality
  
