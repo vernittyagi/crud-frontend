@@ -24,7 +24,9 @@ Frontend for Auth API (Github repo - https://github.com/vernittyagi/crud-backend
 
 
 ## Status
-Learning Project 
-- Will be adding centralized AuthContext for storing user, isAuthenticated, login and logout  
-- Inactivity logout functionality
+Upcoming updates
+- Refresh tokens
+- Role-based acces
+- Password reset
+- API rate limiting
  
