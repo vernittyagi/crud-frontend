@@ -13,9 +13,11 @@ Frontend for Auth API (Github repo - https://github.com/vernittyagi/crud-backend
 - "Route route and redirect"
 - "User profile page showing user email fetched from DB"
 - "Session expiry handling"
+- "Central AuthContext for user activity"
+- "Public & Private layouts for conditional NavBar handling"
 
 ## Tech stack
-- Frontend - react (Vite)
+- Frontend - react (Vite), Tailwind CSS
 - Backend - Nodejs, Express
 - Database - MongoDB
 - Authetication - JWT, bcrypt

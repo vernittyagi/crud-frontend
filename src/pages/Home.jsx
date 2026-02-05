@@ -13,9 +13,10 @@ const Home = () => {
         navigate('/login')
       }
     }, [])
-    
+
 
   return <h2>Loading...</h2>;
 }
 
 export default Home
+

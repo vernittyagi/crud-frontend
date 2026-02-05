@@ -10,18 +10,18 @@ const NavBar = () => {
         navigate('/login')
     }
     return (
-        <nav>
-            <Link to="/">Home</Link>
+        <nav className="flex gap-5 text-2xl text-white font-bold p-2 bg-[#343434]">
+            {/* <Link to="/" className="hover:cursor-pointer">Home</Link> */}
             {isAuthenticated ? (
                 <>
-                    <Link to="/dashboard">Dashboard</Link>
-                    <Link to="/profile">Profile</Link>
-                    <button onClick={handleLogout}>Logout</button>
+                    <Link to="/dashboard" className="hover:cursor-pointer">Dashboard</Link>
+                    <Link to="/profile" className="hover:cursor-pointer">Profile</Link>
+                    <button className="hover:cursor-pointer" onClick={handleLogout}>Logout</button>
                 </>
             ) : (
                 <>
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
+                    <Link to="/login" className="hover:cursor-pointer">Login</Link>
+                    <Link to="/register" className="hover:cursor-pointer">Register</Link>
                 </>
             )
             }
