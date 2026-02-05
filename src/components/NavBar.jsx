@@ -1,18 +1,18 @@
-import { use } from "react"
 import { Link, useNavigate } from "react-router-dom"
+import { useAuth } from "../context/AuthContext.jsx";
 
 const NavBar = () => {
     const navigate = useNavigate();
-    const token = localStorage.getItem("token")
+    const {isAuthenticated, logout} = useAuth();
 
     const handleLogout = () => {
-        localStorage.removeItem("token");
+        logout()
         navigate('/login')
     }
     return (
         <nav>
             <Link to="/">Home</Link>
-            {token ? (
+            {isAuthenticated ? (
                 <>
                     <Link to="/dashboard">Dashboard</Link>
                     <Link to="/profile">Profile</Link>

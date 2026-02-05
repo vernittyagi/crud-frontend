@@ -2,10 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import { fetchClient } from '../api/fetchClient';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext.jsx';
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const {login} = useAuth();
     const navigate = useNavigate();
 
     const handlesubmit = async (e) => {
@@ -15,12 +17,10 @@ const Login = () => {
                 method: "POST",
                 body: JSON.stringify({ email, password }),
             });
-            console.log("response from login api is - ", res);
             if (!res.token) {
                 throw new Error(res.message || 'Invalid login');
             }
-            localStorage.setItem('token', res.token);
-            console.log('Stored token:', localStorage.getItem('token'));
+            login(res.token)
             navigate('/dashboard')
         } catch (err) {
             alert(err.message)
